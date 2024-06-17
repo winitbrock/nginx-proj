@@ -9,6 +9,7 @@ metadata:
   annotations:
     argocd.argoproj.io/hook: ""
     argocd.argoproj.io/hook-delete-policy: HookSucceeded
+    argocd.argoproj.io/sync-wave: "4"
 spec:
   replicas: 1
   selector:
@@ -62,6 +63,7 @@ metadata:
   namespace: {{ .Values.namespace.name }}
   annotations:
     argocd.argoproj.io/hook: PreSync
+    argocd.argoproj.io/sync-wave: "3"
 spec:
   template:
     spec:
@@ -85,6 +87,7 @@ metadata:
   namespace: {{ .Values.namespace.name }}
   annotations:
     argocd.argoproj.io/hook: PostSync
+    argocd.argoproj.io/sync-wave: "5"
 spec:
   template:
     spec:

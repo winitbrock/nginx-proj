@@ -3,6 +3,8 @@ kind: ConfigMap
 metadata:
   name: {{ .Values.configMap.name }}
   namespace: {{ .Values.namespace.name }}
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
 data:
   script: |
 {{ .Values.configMap.data.script | indent 4 }}
