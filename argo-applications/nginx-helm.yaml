@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nginx
+  name: ronenb-nginx
   namespace: argocd
 spec:
   destination:
@@ -10,7 +10,7 @@ spec:
   source:
     path: nginx-helm
     repoURL: git@github.com:amitopenwriteup/nginx-argoproj.git
-    targetRevision: main
+    targetRevision: ronenb
     helm:
       valueFiles:
         - Values.yaml
