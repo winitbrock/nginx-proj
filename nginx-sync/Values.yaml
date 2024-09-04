@@ -1,4 +1,4 @@
 namespace:
-  name: amit-stage-nginx-namespace
+  name: azhar-stage-nginx-namespace
 serviceAccount:
-  name: amit-stage-nginx-sa
+  name: azhar-stage-nginx-sa
