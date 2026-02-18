@@ -2,3 +2,5 @@ namespace:
   name: ronenb-stage-nginx-namespace
 serviceAccount:
   name: ronenb-stage-nginx-sa
+spec:
+  replicas: 5
